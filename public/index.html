@@ -1,0 +1,17 @@
+<html ng-app="SkeletonApp">
+    <head>
+        <title>Angularjs - Browserify - Bower skeleton</title>
+    </head>
+    <body ng-controller="HomeController as ctrl">
+        <h1>Hello {{ctrl.counter}}</h1>
+        <button type="button" ng-click="ctrl.inc()">ADD</button>
+        <button type="button" ng-click="ctrl.getUsers()">Show users</button>
+        <ul>
+            <li ng-repeat="user in ctrl.users">
+                <span>{{user.name}} : {{user.age}}</span>
+            </li>
+        </ul>
+        <script src="/static/vendor/angular/angular.js"></script>
+        <script src="/static/js/app.js"></script>
+    </body>
+</html>

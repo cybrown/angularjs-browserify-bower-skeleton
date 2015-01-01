@@ -1,0 +1,20 @@
+{
+  "name": "angularjs-browserify-bower-skeleton",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cybrown/angularjs-browserify-bower-skeleton",
+  "authors": [
+    "Cy Brown <cy.brown59@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.8"
+  }
+}

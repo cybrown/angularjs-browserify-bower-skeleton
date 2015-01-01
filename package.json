@@ -1,0 +1,38 @@
+{
+  "name": "angularjs-browserify-bower-skeleton",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-public": "cp public/* dist/",
+    "build-bower": "bower-main-files -b bower_components -o dist/static/vendor",
+    "build-browserify": "mkdirp dist/static/js && browserify src/js/application.js -o dist/static/js/app.js -d",
+    "build-js": "npm run build-browserify",
+    "clean": "rimraf dist && mkdirp dist",
+    "prebuild": "npm run clean",
+    "build": "npm run build-bower && npm run build-public && npm run build-js",
+    "watch-js": "watch \"npm run build-js\" src",
+    "watch-public": "watch \"npm run build-public\" public",
+    "watch": "npm run watch-public & npm run watch-js &",
+    "server": "npm run clean && npm run build && npm run watch && cd dist && http-server -o -s -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cybrown/angularjs-browserify-bower-skeleton.git"
+  },
+  "author": "Cy Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cybrown/angularjs-browserify-bower-skeleton/issues"
+  },
+  "homepage": "https://github.com/cybrown/angularjs-browserify-bower-skeleton",
+  "devDependencies": {
+    "bower-main-files": "0.0.4",
+    "browserify": "^8.0.2",
+    "http-server": "^0.7.4",
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8",
+    "watch": "^0.13.0"
+  }
+}
