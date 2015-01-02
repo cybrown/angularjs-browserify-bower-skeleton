@@ -22,13 +22,17 @@
  - Browserify
  - Public folder for static files
  - Copy main bower files to dist folder
- - Watch public files and javascript source files
+ - Watch public files, javascript source files and bower components
  - Using npm as a task runner (no grunt / gulp)
  - Source maps with browserify
+ - Files organized in modules
+ - Routing configuration file
+ - Constant configuration file
 
 ## Missing features
 
 - javascript linting
 - css preprocessor ?
-- ui-router
 - livereload
+- production quality files (minification...)
+- inlining of angular html templates
