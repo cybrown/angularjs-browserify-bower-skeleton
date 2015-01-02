@@ -9,14 +9,19 @@
     "build-bower": "bower-main-files -b bower_components -o dist/static/vendor",
     "build-browserify": "mkdirp dist/static/js && browserify src/js/application.js -o dist/static/js/app.js -d",
     "build-js": "npm run build-browserify",
-    "clean": "rimraf dist && mkdirp dist",
+    "clean-js": "rimraf dist/static/js",
+    "clean-bower": "rimraf dist/static/vendor",
+    "clean": "rimraf dist && mkdir dist",
+    "cleanall": "rimraf bower_components && rimraf dist && mkdir dist && rimraf node_modules",
     "prebuild": "npm run clean",
     "build": "npm run build-bower && npm run build-public && npm run build-js",
-    "watch-js": "watch \"npm run build-js\" src",
+    "watch-js": "watch \"npm run clean-js && npm run build-js\" src",
     "watch-public": "watch \"npm run build-public\" public",
-    "watch": "npm run watch-public & npm run watch-js &",
+    "watch-bower": "watch \"npm run clean-bower && npm run build-bower\" bower_components",
+    "watch": "npm run watch-public & npm run watch-js & npm run watch-bower &",
     "server": "npm run clean && npm run build && npm run watch && cd dist && http-server -o -s -c-1",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "bower": "bower"
   },
   "repository": {
     "type": "git",
