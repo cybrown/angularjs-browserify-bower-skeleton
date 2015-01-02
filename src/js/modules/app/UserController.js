@@ -1,14 +1,10 @@
-var HomeController = function (userService) {
+var UserController = function (userService) {
     this.userService = userService;
-    this.counter = 1;
     this.users = [];
+    this.getUsers();
 };
 
-HomeController.prototype.inc = function () {
-    this.counter++;
-};
-
-HomeController.prototype.getUsers = function () {
+UserController.prototype.getUsers = function () {
     var _this = this;
     this.userService.findAll().then(function (users) {
         _this.users.length = 0;
@@ -18,4 +14,4 @@ HomeController.prototype.getUsers = function () {
     });
 };
 
-module.exports = HomeController;
+module.exports = UserController;

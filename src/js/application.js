@@ -1,3 +1,4 @@
-angular.module('SkeletonApp', [])
-    .service('userService', require('./services/UserService'))
-    .controller('HomeController', require('./controllers/HomeController'));
+require('./modules/users');
+require('./modules/app');
+
+angular.module('SkeletonApp', ['skeleton.app', 'skeleton.users']);

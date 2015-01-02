@@ -2,16 +2,14 @@
     <head>
         <title>Angularjs - Browserify - Bower skeleton</title>
     </head>
-    <body ng-controller="HomeController as ctrl">
-        <h1>Hello {{ctrl.counter}}</h1>
-        <button type="button" ng-click="ctrl.inc()">ADD</button>
-        <button type="button" ng-click="ctrl.getUsers()">Show users</button>
+    <body>
         <ul>
-            <li ng-repeat="user in ctrl.users">
-                <span>{{user.name}} : {{user.age}}</span>
-            </li>
+            <li><a ui-sref="index">Home</a></li>
+            <li><a ui-sref="users">Users</a></li>
         </ul>
+        <ui-view />
         <script src="/static/vendor/angular/angular.js"></script>
+        <script src="/static/vendor/ui-router/release/angular-ui-router.js"></script>
         <script src="/static/js/app.js"></script>
     </body>
 </html>

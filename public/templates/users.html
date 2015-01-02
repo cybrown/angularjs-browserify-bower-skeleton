@@ -1,0 +1,6 @@
+<button type="button" ng-click="ctrl.getUsers()">Refresh users (edit data.json)</button>
+<ul>
+    <li ng-repeat="user in ctrl.users">
+        <span>{{user.name}} : {{user.age}}</span>
+    </li>
+</ul>
