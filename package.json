@@ -15,7 +15,8 @@
     "watch-js": "watch \"npm run build-js\" src",
     "watch-public": "watch \"npm run build-public\" public",
     "watch": "npm run watch-public & npm run watch-js &",
-    "server": "npm run clean && npm run build && npm run watch && cd dist && http-server -o -s -c-1"
+    "server": "npm run clean && npm run build && npm run watch && cd dist && http-server -o -s -c-1",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/cybrown/angularjs-browserify-bower-skeleton",
   "devDependencies": {
+    "bower": "^1.3.12",
     "bower-main-files": "0.0.4",
     "browserify": "^8.0.2",
     "http-server": "^0.7.4",
