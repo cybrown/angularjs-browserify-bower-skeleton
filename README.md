@@ -1,5 +1,9 @@
 # Anguarljs skeleton project with bower and browserfiy
 
+## Requirements
+ - nodejs (tested with node 0.10+)
+ - npm version 2+ (upgrade npm with npm update -g)
+
 ## Install
     npm install
     
